@@ -118,4 +118,24 @@ public class Exercise {
 
         System.out.println("Digit sum of " + valueCopy + " is " + dSum);
     }
+
+    /**
+     * This method prints digit count of argument number.
+     *
+     * @param value natural number
+     */
+    public static void printDigitCount(int value){
+        System.out.println("--------------------------------------------");
+        System.out.println("Vytvorte program, ktorý načíta prirodzené číslo x a vypíše počet cifier čísla x.");
+
+        //check whether argument is natural number
+        if (value < 0){
+            System.out.println("Argument must be natural number.");
+            return;
+        }
+
+        int dCount = String.valueOf(value).length();
+
+        System.out.println(value + " is a " + dCount + " digit number.");
+    }
 }
