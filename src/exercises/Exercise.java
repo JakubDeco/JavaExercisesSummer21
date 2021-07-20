@@ -3,6 +3,9 @@ package exercises;
 public class Exercise {
     private Exercise(){}
 
+    private static String lineSeparator = "--------------------------------------------";
+    private static String naturalNumber = "Argument must be natural number.";
+
     /**
      * This method takes two natural numbers and prints all even numbers in that interval.
      * Arguments a needs to be lesser or equal than b. Interval includes arguments.
@@ -11,7 +14,7 @@ public class Exercise {
      * @param b end of interval
      */
     public static void printEvenNumbInInterval(int a, int b){
-        System.out.println("--------------------------------------------");
+        System.out.println(lineSeparator);
         System.out.println("Vytvorte program, ktorý načíta dve prirodzené čísla (a,b) " +
                 "a vypíše všetky párne čísla z tohto intervalu. a = " + a + ", b = " + b);
 
@@ -47,7 +50,7 @@ public class Exercise {
      * @param number decimal to be converted to binary
      */
     public static void printToBinary(int number){
-        System.out.println("--------------------------------------------");
+        System.out.println(lineSeparator);
         System.out.println("Vytvorte program, ktorý načíta prirodzené číslo v desiatkovej sústave" +
                 " a prevedie ho do dvojkovej sústavy. Výsledok vypíše.");
 
@@ -66,7 +69,7 @@ public class Exercise {
      * @param base to which first argument is converted to
      */
     public static void printToCustomBase(int value, int base){
-        System.out.println("--------------------------------------------");
+        System.out.println(lineSeparator);
         System.out.println("Vytvorte program, ktorý načíta dve prirodzené čísla (a, 1<b<=10)" +
                 " a prevedie číslo a v desiatkovej sústave do sústavy so základom b.");
 
@@ -100,12 +103,12 @@ public class Exercise {
      * @param value natural number
      */
     public static void printDigitSum(int value){
-        System.out.println("--------------------------------------------");
+        System.out.println(lineSeparator);
         System.out.println("Vytvorte program, ktorý načíta prirodzené číslo x a vypíše jeho ciferný sučet.");
 
         //check whether argument is natural number
         if (value < 0){
-            System.out.println("Argument must be natural number.");
+            System.out.println(naturalNumber);
             return;
         }
 
@@ -125,12 +128,12 @@ public class Exercise {
      * @param value natural number
      */
     public static void printDigitCount(int value){
-        System.out.println("--------------------------------------------");
+        System.out.println(lineSeparator);
         System.out.println("Vytvorte program, ktorý načíta prirodzené číslo x a vypíše počet cifier čísla x.");
 
         //check whether argument is natural number
         if (value < 0){
-            System.out.println("Argument must be natural number.");
+            System.out.println(naturalNumber);
             return;
         }
 
@@ -145,13 +148,13 @@ public class Exercise {
      * @param number natural number
      */
     public static void printReverse(int number){
-        System.out.println("--------------------------------------------");
+        System.out.println(lineSeparator);
         System.out.println("Vytvorte program, ktorý načíta prirodzené čislo x a vyrobí číslo y," +
                 " ktoré má tie isté cifry ako číslo x, ale v opačnom poradí. Bez pouzitia existujucej metody v Jave.");
 
         //check whether argument is natural number
         if (number < 0){
-            System.out.println("Argument must be natural number.");
+            System.out.println(naturalNumber);
             return;
         }
 
