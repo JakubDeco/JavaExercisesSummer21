@@ -94,4 +94,28 @@ public class Exercise {
         //printing result
         System.out.println("Number " + valueCopy + " (base 10) is " + result.toString() + " (base " + base + ").");
     }
+
+    /**
+     * This method prints digit sum of argument. Argument must be natural number.
+     * @param value natural number
+     */
+    public static void printDigitSum(int value){
+        System.out.println("--------------------------------------------");
+        System.out.println("Vytvorte program, ktorý načíta prirodzené číslo x a vypíše jeho ciferný sučet.");
+
+        //check whether argument is natural number
+        if (value < 0){
+            System.out.println("Argument must be natural number.");
+            return;
+        }
+
+        int valueCopy = value;
+        int dSum = 0;
+        while (value != 0){
+            dSum+=value%10;
+            value/=10;
+        }
+
+        System.out.println("Digit sum of " + valueCopy + " is " + dSum);
+    }
 }

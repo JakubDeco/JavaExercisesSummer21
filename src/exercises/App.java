@@ -5,6 +5,7 @@ public class App {
         Exercise.printEvenNumbInInterval(1,11);
         Exercise.printToBinary(24);
         Exercise.printToCustomBase(521,5);
+        Exercise.printDigitSum(8934);
 
     }
 }
