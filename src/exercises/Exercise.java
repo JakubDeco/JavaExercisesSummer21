@@ -58,4 +58,40 @@ public class Exercise {
 
         System.out.println(number + " in binary is " + Integer.toBinaryString(number));
     }
+
+    /**
+     * This method converts argument natural number from decimal to custom base in [2,10] interval.
+     *
+     * @param value in decimal
+     * @param base to which first argument is converted to
+     */
+    public static void printToCustomBase(int value, int base){
+        System.out.println("--------------------------------------------");
+        System.out.println("Vytvorte program, ktorý načíta dve prirodzené čísla (a, 1<b<=10)" +
+                " a prevedie číslo a v desiatkovej sústave do sústavy so základom b.");
+
+        //check if 1<base<10
+        if (base <= 1 || base >=10) {
+            System.out.println("Base has to be in interval [2,10].");
+            return;
+        }
+
+        //check if value is natural number
+        if (value < 0) {
+            System.out.println("Value has to be natural number.");
+            return;
+        }
+
+        int valueCopy = value; // copying initial value
+        StringBuilder result = new StringBuilder();
+
+        //converting
+        while (value != 0){
+            result.insert(0,value%base);
+            value/=base;
+        }
+
+        //printing result
+        System.out.println("Number " + valueCopy + " (base 10) is " + result.toString() + " (base " + base + ").");
+    }
 }
