@@ -83,7 +83,7 @@ public class Exercise {
         }
 
         int valueCopy = value; // copying initial value
-        StringBuilder result = new StringBuilder();
+        var result = new StringBuilder();
 
         //converting
         while (value != 0){
@@ -110,7 +110,7 @@ public class Exercise {
         }
 
         int valueCopy = value;
-        int dSum = 0;
+        var dSum = 0;
         while (value != 0){
             dSum+=value%10;
             value/=10;
@@ -137,5 +137,31 @@ public class Exercise {
         int dCount = String.valueOf(value).length();
 
         System.out.println(value + " is a " + dCount + " digit number.");
+    }
+
+    /**
+     * This method prints argument number in reverse.
+     *
+     * @param number natural number
+     */
+    public static void printReverse(int number){
+        System.out.println("--------------------------------------------");
+        System.out.println("Vytvorte program, ktorý načíta prirodzené čislo x a vyrobí číslo y," +
+                " ktoré má tie isté cifry ako číslo x, ale v opačnom poradí. Bez pouzitia existujucej metody v Jave.");
+
+        //check whether argument is natural number
+        if (number < 0){
+            System.out.println("Argument must be natural number.");
+            return;
+        }
+
+        var result = new StringBuilder();
+        var sNumber = String.valueOf(number);
+
+        for (var i = 0; i < sNumber.length(); i++) {
+            result.insert(0,sNumber.charAt(i));
+        }
+
+        System.out.println("Number " + number + " in reverse is " + result.toString());
     }
 }

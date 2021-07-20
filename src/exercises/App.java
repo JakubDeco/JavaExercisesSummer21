@@ -7,6 +7,7 @@ public class App {
         Exercise.printToCustomBase(521,5);
         Exercise.printDigitSum(8934);
         Exercise.printDigitCount(123456789);
+        Exercise.printReverse(123456789);
 
     }
 }
