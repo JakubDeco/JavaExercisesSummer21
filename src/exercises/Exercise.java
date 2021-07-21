@@ -11,11 +11,12 @@ public class Exercise {
     private static final String NATURAL_NUMBERS = "Arguments must be natural numbers.";
 
     /**
-     * This method takes two natural numbers and prints all even numbers in that interval.
+     * This method takes two natural numbers and finds and prints all even numbers in that interval.
      * Arguments a needs to be lesser or equal than b. Interval includes arguments.
      *
      * @param a start of interval
      * @param b end of interval
+     * @return list of found even numbers or null if wrong arguments are passed
      */
     public static List<Integer> findEvenNumbInInterval(int a, int b){
         System.out.println(LINE_SEPARATOR);
