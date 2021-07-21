@@ -141,23 +141,25 @@ public class Exercise {
     }
 
     /**
-     * This method prints digit count of argument number.
+     * This method calculates and prints digit count of argument number.
      *
      * @param value natural number
+     * @return digit count or 0 if not given natural number
      */
-    public static void printDigitCount(int value){
+    public static int calcDigitCount(int value){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené číslo x a vypíše počet cifier čísla x.");
 
         //check whether argument is natural number
         if (value < 0){
             System.out.println(NATURAL_NUMBER);
-            return;
+            return 0;
         }
 
         int dCount = String.valueOf(value).length();
 
         System.out.println(value + " is a " + dCount + " digit number.");
+        return dCount;
     }
 
     /**
