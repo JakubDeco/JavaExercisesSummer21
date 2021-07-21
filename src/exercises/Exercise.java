@@ -260,8 +260,9 @@ public class Exercise {
      *
      * @param x natural number
      * @param y number in interval [0,9]
+     * @return int count or -1 if conditions failed
      */
-    public static void printDigitInNumberCount(int x, int y){
+    public static int findDigitInNumberCount(int x, int y){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené čísla (x, 0<=y<=9)" +
                 " a zistí, koľkokrát sa cifra y vyskytuje v zápise čísla x.");
@@ -269,13 +270,13 @@ public class Exercise {
         //check whether argument is natural number
         if (x < 0){
             System.out.println(NATURAL_NUMBER);
-            return;
+            return -1;
         }
 
         //check if 0<=y<=9
         if (y < 0 || y >9) {
             System.out.println("Y has to be in interval [0,9].");
-            return;
+            return -1;
         }
 
         var strX = String.valueOf(x);
@@ -287,6 +288,7 @@ public class Exercise {
 
         //result
         System.out.println("Digit " + y + " occurs " + count + " times in number " + x);
+        return count;
     }
 
     /**
