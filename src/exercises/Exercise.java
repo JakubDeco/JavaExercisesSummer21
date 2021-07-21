@@ -225,8 +225,9 @@ public class Exercise {
      *
      * @param x dividend
      * @param y divisor
+     * @return int quotient or -1 if conditions failed
      */
-    public static void printDiv(int x, int y){
+    public static int div(int x, int y){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené čísla (x, y)" +
                 " a vypíše hodnotu (x div y) bez toho, aby ste použili operáciu div.");
@@ -234,13 +235,13 @@ public class Exercise {
         //checking if arguments are natural numbers
         if(x < 0 || y < 0) {
             System.out.println(NATURAL_NUMBERS);
-            return;
+            return -1;
         }
 
         //check division by zero
         if (y == 0){
             System.out.println("Division by zero is not allowed.");
-            return;
+            return -1;
         }
 
         var i = 1;
@@ -251,6 +252,7 @@ public class Exercise {
 
         //result
         System.out.println(x + "/" + y + "=" + i);
+        return i;
     }
 
     /**
