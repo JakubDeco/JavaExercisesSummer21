@@ -20,7 +20,7 @@ public class Exercise {
 
         //checking if arguments are natural numbers
         if(a < 0 || b < 0) {
-            System.out.println("One or both arguments are lesser than 0.");
+            System.out.println("Argument must be natural numbers.");
             return;
         }
 
@@ -166,5 +166,33 @@ public class Exercise {
         }
 
         System.out.println("Number " + number + " in reverse is " + result.toString());
+    }
+
+    /**
+     * This method calculates remainder of division and prints it. Arguments must be natural numbers.
+     *
+     * @param x dividend
+     * @param y divisor
+     */
+    public static void printMod(int x, int y){
+        System.out.println(lineSeparator);
+        System.out.println("Vytvorte program, ktorý načíta prirodzené čísla (x, y)" +
+                " a vypíše hodnotu (x mod y) bez toho, aby ste použili operáciu mod.");
+
+        //checking if arguments are natural numbers
+        if(x < 0 || y < 0) {
+            System.out.println("Argument must be natural numbers.");
+            return;
+        }
+
+        //check division by zero
+        if (y == 0){
+            System.out.println("Division by zero is not allowed.");
+            return;
+        }
+
+        int result = x-y*(x/y);
+
+        System.out.println(x + "%" + y + "=" + result);
     }
 }
