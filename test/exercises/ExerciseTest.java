@@ -53,6 +53,14 @@ class ExerciseTest {
 
     @Test
     void calcDigitSum() {
+        assertEquals(-1,Exercise.calcDigitSum(-1));
+        assertEquals(-1,Exercise.calcDigitSum(-4546837));
+        assertEquals(0,Exercise.calcDigitSum(0));
+        assertEquals(15,Exercise.calcDigitSum(12354));
+        assertEquals(6,Exercise.calcDigitSum(15));
+        assertEquals(3,Exercise.calcDigitSum(3));
+        assertEquals(55,Exercise.calcDigitSum(698754853));
+        assertEquals(75,Exercise.calcDigitSum(999998769));
     }
 
     @Test
