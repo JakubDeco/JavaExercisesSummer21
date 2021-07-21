@@ -65,6 +65,12 @@ class ExerciseTest {
 
     @Test
     void calcDigitCount() {
+        assertEquals(0,Exercise.calcDigitCount(-1));
+        assertEquals(0,Exercise.calcDigitCount(-876423));
+        assertEquals(1,Exercise.calcDigitCount(0));
+        assertEquals(2,Exercise.calcDigitCount(29));
+        assertEquals(5,Exercise.calcDigitCount(96725));
+        assertEquals(10,Exercise.calcDigitCount(1358364873));
     }
 
     @Test
