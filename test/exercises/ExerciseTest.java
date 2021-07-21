@@ -120,5 +120,21 @@ class ExerciseTest {
 
     @Test
     void checkBirthNumbFormat() {
+        assertFalse(Exercise.checkBirthNumbFormat("a155 /8962d"));
+        assertFalse(Exercise.checkBirthNumbFormat("/7865369852"));
+        assertFalse(Exercise.checkBirthNumbFormat("786341963*"));
+        assertFalse(Exercise.checkBirthNumbFormat("752"));
+        assertFalse(Exercise.checkBirthNumbFormat(""));
+        assertFalse(Exercise.checkBirthNumbFormat(null));
+
+        //before 1 January 1954
+        assertTrue(Exercise.checkBirthNumbFormat("746952/748 "));
+        assertTrue(Exercise.checkBirthNumbFormat(" 365412369  "));
+
+        //after 1 January 1954
+        assertTrue(Exercise.checkBirthNumbFormat("123456/7890  "));
+        assertTrue(Exercise.checkBirthNumbFormat(" 5678537453"));
+        assertTrue(Exercise.checkBirthNumbFormat("963578/7856   "));
+        assertTrue(Exercise.checkBirthNumbFormat("  8632457453"));
     }
 }
