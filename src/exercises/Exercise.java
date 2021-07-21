@@ -1,5 +1,8 @@
 package exercises;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Exercise {
     private Exercise(){}
 
@@ -14,7 +17,7 @@ public class Exercise {
      * @param a start of interval
      * @param b end of interval
      */
-    public static void printEvenNumbInInterval(int a, int b){
+    public static List<Integer> findEvenNumbInInterval(int a, int b){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta dve prirodzené čísla (a,b) " +
                 "a vypíše všetky párne čísla z tohto intervalu. a = " + a + ", b = " + b);
@@ -22,13 +25,13 @@ public class Exercise {
         //checking if arguments are natural numbers
         if(a < 0 || b < 0) {
             System.out.println(NATURAL_NUMBERS);
-            return;
+            return null;
         }
 
         //checking if a is lesser or equal than b
         if(a >= b) {
             System.out.println("Argument a is greater or equal than b.");
-            return;
+            return null;
         }
 
         //checking whether a is even or odd or 0
@@ -37,12 +40,15 @@ public class Exercise {
         else if (a%2 == 1)
             a++;
 
+        List<Integer> result = new ArrayList<>();
         while (a <= b){
+            result.add(a);
             System.out.print(a + ", ");
             a+=2;
         }
 
         System.out.println();
+        return result;
     }
 
     /**
