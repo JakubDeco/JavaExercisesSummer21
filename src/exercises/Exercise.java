@@ -167,7 +167,7 @@ public class Exercise {
      * This method reverses an argument number in reverse.
      *
      * @param number natural number
-     * @return String of reversed number
+     * @return String of reversed number or null if not natural number passed
      */
     public static String reverse(int number){
         System.out.println(LINE_SEPARATOR);

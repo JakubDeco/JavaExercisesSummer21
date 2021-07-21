@@ -75,6 +75,14 @@ class ExerciseTest {
 
     @Test
     void reverse() {
+        assertNull(Exercise.reverse(-1));
+        assertNull(Exercise.reverse(-12375));
+
+        assertEquals("0",Exercise.reverse(0));
+        assertEquals("8763",Exercise.reverse(3678));
+        assertEquals("987654321",Exercise.reverse(123456789));
+        assertEquals("12321",Exercise.reverse(12321));
+        assertEquals("44",Exercise.reverse(44));
     }
 
     @Test
