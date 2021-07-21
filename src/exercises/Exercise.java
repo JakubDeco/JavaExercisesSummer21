@@ -195,8 +195,9 @@ public class Exercise {
      *
      * @param x dividend
      * @param y divisor
+     * @return int of remainder or -1 if conditions failed
      */
-    public static void printMod(int x, int y){
+    public static int mod(int x, int y){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené čísla (x, y)" +
                 " a vypíše hodnotu (x mod y) bez toho, aby ste použili operáciu mod.");
@@ -204,18 +205,19 @@ public class Exercise {
         //checking if arguments are natural numbers
         if(x < 0 || y < 0) {
             System.out.println(NATURAL_NUMBERS);
-            return;
+            return -1;
         }
 
         //check division by zero
         if (y == 0){
             System.out.println("Division by zero is not allowed.");
-            return;
+            return -1;
         }
 
         int result = x-y*(x/y);
 
         System.out.println(x + "%" + y + "=" + result);
+        return result;
     }
 
     /**
