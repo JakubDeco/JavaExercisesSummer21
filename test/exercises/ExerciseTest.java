@@ -1,5 +1,7 @@
 package exercises;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -19,5 +21,47 @@ class ExerciseTest {
 
         var arr2 = new Integer[]{22,24,26,28,30};
         assertEquals(Arrays.asList(arr2), Exercise.findEvenNumbInInterval(22,30));
+    }
+
+    @Test
+    void toBinary() {
+        assertEquals("10010100",Exercise.toBinary(148));
+        assertEquals("0",Exercise.toBinary(0));
+        assertEquals("11011001111111011000100110011",Exercise.toBinary(457158963));
+        assertEquals("1101",Exercise.toBinary(13));
+        assertNull(Exercise.toBinary(-1));
+        assertNull(Exercise.toBinary(-98743845));
+    }
+
+    @Test
+    void toCustomBase() {
+    }
+
+    @Test
+    void calcDigitSum() {
+    }
+
+    @Test
+    void calcDigitCount() {
+    }
+
+    @Test
+    void reverse() {
+    }
+
+    @Test
+    void mod() {
+    }
+
+    @Test
+    void div() {
+    }
+
+    @Test
+    void findDigitInNumberCount() {
+    }
+
+    @Test
+    void checkBirthNumbFormat() {
     }
 }

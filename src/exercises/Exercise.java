@@ -56,7 +56,7 @@ public class Exercise {
      * This method converts argument number to binary. Argument has to be natural number.
      *
      * @param number decimal to be converted to binary
-     * @return String binary form of the argument
+     * @return String binary form of the argument or null if not natural number
      */
     public static String toBinary(int number){
         System.out.println(LINE_SEPARATOR);
@@ -66,6 +66,7 @@ public class Exercise {
         //checking whether argument is natural
         if (number < 0) {
             System.out.println("Argument is not natural number.");
+            return null;
         }
 
         var result = Integer.toBinaryString(number);
