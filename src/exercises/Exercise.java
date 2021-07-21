@@ -53,11 +53,12 @@ public class Exercise {
     }
 
     /**
-     * This method prints binary form of argument number. Argument has to be natural number.
+     * This method converts argument number to binary. Argument has to be natural number.
      *
      * @param number decimal to be converted to binary
+     * @return String binary form of the argument
      */
-    public static void printToBinary(int number){
+    public static String toBinary(int number){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené číslo v desiatkovej sústave" +
                 " a prevedie ho do dvojkovej sústavy. Výsledok vypíše.");
@@ -67,7 +68,10 @@ public class Exercise {
             System.out.println("Argument is not natural number.");
         }
 
-        System.out.println(number + " in binary is " + Integer.toBinaryString(number));
+        var result = Integer.toBinaryString(number);
+        System.out.println(number + " in binary is " + result);
+
+        return result;
     }
 
     /**
