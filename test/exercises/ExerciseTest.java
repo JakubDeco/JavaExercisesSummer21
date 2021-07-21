@@ -125,6 +125,8 @@ class ExerciseTest {
         assertFalse(Exercise.checkBirthNumbFormat("786341963*"));
         assertFalse(Exercise.checkBirthNumbFormat("752"));
         assertFalse(Exercise.checkBirthNumbFormat(""));
+        assertFalse(Exercise.checkBirthNumbFormat("778601/142"));
+        assertFalse(Exercise.checkBirthNumbFormat("770671/1429"));
         assertFalse(Exercise.checkBirthNumbFormat(null));
 
         //before 1 January 1954
