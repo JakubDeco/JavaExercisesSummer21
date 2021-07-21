@@ -87,6 +87,15 @@ class ExerciseTest {
 
     @Test
     void mod() {
+        assertEquals(-1,Exercise.mod(-1,2));
+        assertEquals(-1,Exercise.mod(689,0));
+
+        assertEquals(1,Exercise.mod(7,2));
+        assertEquals(29,Exercise.mod(9687364,35));
+        assertEquals(0,Exercise.mod(365,365));
+        assertEquals(3188,Exercise.mod(453218763,7835));
+        assertEquals(12,Exercise.mod(12,95));
+        assertEquals(0,Exercise.mod(16,4));
     }
 
     @Test
