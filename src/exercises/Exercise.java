@@ -163,11 +163,12 @@ public class Exercise {
     }
 
     /**
-     * This method prints argument number in reverse.
+     * This method reverses an argument number in reverse.
      *
      * @param number natural number
+     * @return String of reversed number
      */
-    public static void printReverse(int number){
+    public static String reverse(int number){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené čislo x a vyrobí číslo y," +
                 " ktoré má tie isté cifry ako číslo x, ale v opačnom poradí. Bez pouzitia existujucej metody v Jave.");
@@ -175,7 +176,7 @@ public class Exercise {
         //check whether argument is natural number
         if (number < 0){
             System.out.println(NATURAL_NUMBER);
-            return;
+            return null;
         }
 
         var result = new StringBuilder();
@@ -186,6 +187,7 @@ public class Exercise {
         }
 
         System.out.println("Number " + number + " in reverse is " + result.toString());
+        return result.toString();
     }
 
     /**
