@@ -310,6 +310,9 @@ public class Exercise {
             return false;
         }
 
-        return birthNumb.trim().matches("^\\d{2}[0156]\\d[0-3]\\d/?\\d{3,4}$");
+        var result = birthNumb.trim().matches("^\\d{2}[0156]\\d[0-3]\\d/?\\d{3,4}$");
+        System.out.println("Birth number format of " + birthNumb.trim() + " validity: " + result);
+
+        return result;
     }
 }

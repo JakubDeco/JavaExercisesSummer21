@@ -2,15 +2,15 @@ package exercises;
 
 public class App {
     public static void main(String[] args) {
-        /*Exercise.printEvenNumbInInterval(1,11);
-        Exercise.printToBinary(24);
-        Exercise.printToCustomBase(521,5);
-        Exercise.printDigitSum(8934);
-        Exercise.printDigitCount(123456789);
-        Exercise.printReverse(123456789);*/
-        Exercise.printMod(478,21);
-        Exercise.printDiv(109,10);
-        Exercise.printDigitInNumberCount(1112345998,1);
-
+        Exercise.findEvenNumbInInterval(1,11);
+        Exercise.toBinary(24);
+        Exercise.toCustomBase(521,5);
+        Exercise.calcDigitSum(8934);
+        Exercise.calcDigitCount(123456789);
+        Exercise.reverse(123456789);
+        Exercise.mod(478,21);
+        Exercise.div(109,10);
+        Exercise.findDigitInNumberCount(1112345998,1);
+        Exercise.checkBirthNumbFormat("960508/7856   ");
     }
 }
