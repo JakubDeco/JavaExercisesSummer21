@@ -100,6 +100,14 @@ class ExerciseTest {
 
     @Test
     void div() {
+        assertEquals(-1,Exercise.div(12378,0));
+        assertEquals(-1,Exercise.div(-1,54));
+
+        assertEquals(870,Exercise.div(7836,9));
+        assertEquals(0,Exercise.div(7,8));
+        assertEquals(1,Exercise.div(29,29));
+        assertEquals(55,Exercise.div(23657891,425986));
+        assertEquals(0,Exercise.div(0,743689423));
     }
 
     @Test
