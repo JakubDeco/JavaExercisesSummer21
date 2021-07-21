@@ -9,5 +9,6 @@ public class App {
         Exercise.printDigitCount(123456789);
         Exercise.printReverse(123456789);*/
         Exercise.printMod(478,21);
+        Exercise.printDiv(109,10);
     }
 }

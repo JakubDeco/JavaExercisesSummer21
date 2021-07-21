@@ -5,6 +5,7 @@ public class Exercise {
 
     private static String lineSeparator = "--------------------------------------------";
     private static String naturalNumber = "Argument must be natural number.";
+    private static String naturalNumbers = "Arguments must be natural numbers.";
 
     /**
      * This method takes two natural numbers and prints all even numbers in that interval.
@@ -20,7 +21,7 @@ public class Exercise {
 
         //checking if arguments are natural numbers
         if(a < 0 || b < 0) {
-            System.out.println("Argument must be natural numbers.");
+            System.out.println(naturalNumbers);
             return;
         }
 
@@ -181,7 +182,7 @@ public class Exercise {
 
         //checking if arguments are natural numbers
         if(x < 0 || y < 0) {
-            System.out.println("Argument must be natural numbers.");
+            System.out.println(naturalNumbers);
             return;
         }
 
@@ -194,5 +195,38 @@ public class Exercise {
         int result = x-y*(x/y);
 
         System.out.println(x + "%" + y + "=" + result);
+    }
+
+    /**
+     * This method calculates quotient(natural). Arguments must be natural numbers.
+     *
+     * @param x dividend
+     * @param y divisor
+     */
+    public static void printDiv(int x, int y){
+        System.out.println(lineSeparator);
+        System.out.println("Vytvorte program, ktorý načíta prirodzené čísla (x, y)" +
+                " a vypíše hodnotu (x div y) bez toho, aby ste použili operáciu div.");
+
+        //checking if arguments are natural numbers
+        if(x < 0 || y < 0) {
+            System.out.println(naturalNumbers);
+            return;
+        }
+
+        //check division by zero
+        if (y == 0){
+            System.out.println("Division by zero is not allowed.");
+            return;
+        }
+
+        var i = 1;
+        while (i*y <= x){
+            i++;
+        }
+        i--;
+
+        //result
+        System.out.println(x + "/" + y + "=" + i);
     }
 }
