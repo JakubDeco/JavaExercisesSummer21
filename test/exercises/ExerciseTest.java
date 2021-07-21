@@ -128,13 +128,13 @@ class ExerciseTest {
         assertFalse(Exercise.checkBirthNumbFormat(null));
 
         //before 1 January 1954
-        assertTrue(Exercise.checkBirthNumbFormat("746952/748 "));
+        assertTrue(Exercise.checkBirthNumbFormat("746902/748 "));
         assertTrue(Exercise.checkBirthNumbFormat(" 365412369  "));
 
         //after 1 January 1954
-        assertTrue(Exercise.checkBirthNumbFormat("123456/7890  "));
-        assertTrue(Exercise.checkBirthNumbFormat(" 5678537453"));
-        assertTrue(Exercise.checkBirthNumbFormat("963578/7856   "));
-        assertTrue(Exercise.checkBirthNumbFormat("  8632457453"));
+        assertTrue(Exercise.checkBirthNumbFormat("121436/7890  "));
+        assertTrue(Exercise.checkBirthNumbFormat(" 5608237453"));
+        assertTrue(Exercise.checkBirthNumbFormat("960508/7856   "));
+        assertTrue(Exercise.checkBirthNumbFormat("  8662157453"));
     }
 }
