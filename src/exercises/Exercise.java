@@ -88,7 +88,7 @@ public class Exercise {
                 " a prevedie číslo a v desiatkovej sústave do sústavy so základom b.");
 
         //check if 1<base<10
-        if (base <= 1 || base >=10) {
+        if (base <= 1 || base >10) {
             System.out.println("Base has to be in interval [2,10].");
             return null;
         }

@@ -35,6 +35,20 @@ class ExerciseTest {
 
     @Test
     void toCustomBase() {
+        assertNull(Exercise.toCustomBase(-1,5));
+        assertNull(Exercise.toCustomBase(478,1));
+        assertNull(Exercise.toCustomBase(23,11));
+        assertNull(Exercise.toCustomBase(789534,-90));
+
+        assertEquals("111",Exercise.toCustomBase(7,2));
+        assertEquals("2010",Exercise.toCustomBase(57,3));
+        assertEquals("2202",Exercise.toCustomBase(162,4));
+        assertEquals("3101103022104",Exercise.toCustomBase(783642154,5));
+        assertEquals("24341",Exercise.toCustomBase(3589,6));
+        assertEquals("6433424",Exercise.toCustomBase(781568,7));
+        assertEquals("560",Exercise.toCustomBase(368,8));
+        assertEquals("16",Exercise.toCustomBase(15,9));
+        assertEquals("9638",Exercise.toCustomBase(9638,10));
     }
 
     @Test
