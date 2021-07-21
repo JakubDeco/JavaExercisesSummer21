@@ -114,17 +114,19 @@ public class Exercise {
     }
 
     /**
-     * This method prints digit sum of argument. Argument must be natural number.
-     * @param value natural number
+     * This method calculates and prints digit sum of argument. Argument must be natural number.
+     *
+     * @param value a natural number
+     * @return digit sum of passed argument or -1 if not given natural number
      */
-    public static void printDigitSum(int value){
+    public static int calcDigitSum(int value){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta prirodzené číslo x a vypíše jeho ciferný sučet.");
 
         //check whether argument is natural number
         if (value < 0){
             System.out.println(NATURAL_NUMBER);
-            return;
+            return -1;
         }
 
         int valueCopy = value;
@@ -135,6 +137,7 @@ public class Exercise {
         }
 
         System.out.println("Digit sum of " + valueCopy + " is " + dSum);
+        return dSum;
     }
 
     /**
