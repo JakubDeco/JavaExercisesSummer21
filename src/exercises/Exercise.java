@@ -263,4 +263,14 @@ public class Exercise {
         //result
         System.out.println("Digit " + y + " occurs " + count + " times in number " + x);
     }
+
+    /**
+     * This method checks the format of argument birth number, but not other rules that apply.
+     *
+     * @param birthNumb birth number to check
+     * @return true or false
+     */
+    public static boolean checkBirthNumbFormat(String birthNumb){
+        return false;
+    }
 }
