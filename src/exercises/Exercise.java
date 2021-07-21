@@ -293,12 +293,23 @@ public class Exercise {
     }
 
     /**
-     * This method checks the format of argument birth number, but not other rules that apply.
+     * This method checks the format of argument birth number, but not other rules that apply
+     * such as whether date indicated exists.
      *
      * @param birthNumb birth number to check
-     * @return true or false
+     * @return true for valid or false
      */
     public static boolean checkBirthNumbFormat(String birthNumb){
-        return false;
+        System.out.println(LINE_SEPARATOR);
+        System.out.println("Napis program, ktory zisti, ci rodne cislo ma spravny format." +
+                " Spravny format rodneho cisla najdite na webe.");
+
+        //check null or blank input
+        if (birthNumb == null || birthNumb.isBlank()){
+            System.out.println("Invalid argument.");
+            return false;
+        }
+
+        return birthNumb.trim().matches("^\\d{2}[0156]\\d[0-3]\\d/?\\d{3,4}$");
     }
 }
