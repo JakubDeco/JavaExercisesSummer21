@@ -10,5 +10,7 @@ public class App {
         Exercise.printReverse(123456789);*/
         Exercise.printMod(478,21);
         Exercise.printDiv(109,10);
+        Exercise.printDigitInNumberCount(1112345998,1);
+
     }
 }

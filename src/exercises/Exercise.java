@@ -229,4 +229,38 @@ public class Exercise {
         //result
         System.out.println(x + "/" + y + "=" + i);
     }
+
+    /**
+     * This method finds number of occurences of argument y in argument x.
+     *
+     * @param x natural number
+     * @param y number in interval [0,9]
+     */
+    public static void printDigitInNumberCount(int x, int y){
+        System.out.println(lineSeparator);
+        System.out.println("Vytvorte program, ktorý načíta prirodzené čísla (x, 0<=y<=9)" +
+                " a zistí, koľkokrát sa cifra y vyskytuje v zápise čísla x.");
+
+        //check whether argument is natural number
+        if (x < 0){
+            System.out.println(naturalNumber);
+            return;
+        }
+
+        //check if 0<=y<=9
+        if (y < 0 || y >9) {
+            System.out.println("Y has to be in interval [0,9].");
+            return;
+        }
+
+        var strX = String.valueOf(x);
+        var count = 0;
+        for (var i = 0; i < strX.length(); i++) {
+            if (strX.charAt(i) == y + 48) //adding 48 to get character representation od y
+                count++;
+        }
+
+        //result
+        System.out.println("Digit " + y + " occurs " + count + " times in number " + x);
+    }
 }
