@@ -112,6 +112,10 @@ class ExerciseTest {
 
     @Test
     void findDigitInNumberCount() {
+        assertEquals(-1,Exercise.findDigitInNumberCount(-1,12357324));
+        assertEquals(-1,Exercise.findDigitInNumberCount(36578945,-1));
+        assertEquals(2,Exercise.findDigitInNumberCount(1786315476,7));
+        assertEquals(9,Exercise.findDigitInNumberCount(333333333,3));
     }
 
     @Test
