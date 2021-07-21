@@ -79,8 +79,9 @@ public class Exercise {
      *
      * @param value in decimal
      * @param base to which first argument is converted to
+     * @return String representation of value in base(base) or null if conditions failed
      */
-    public static void printToCustomBase(int value, int base){
+    public static String toCustomBase(int value, int base){
         System.out.println(LINE_SEPARATOR);
         System.out.println("Vytvorte program, ktorý načíta dve prirodzené čísla (a, 1<b<=10)" +
                 " a prevedie číslo a v desiatkovej sústave do sústavy so základom b.");
@@ -88,13 +89,13 @@ public class Exercise {
         //check if 1<base<10
         if (base <= 1 || base >=10) {
             System.out.println("Base has to be in interval [2,10].");
-            return;
+            return null;
         }
 
         //check if value is natural number
         if (value < 0) {
             System.out.println("Value has to be natural number.");
-            return;
+            return null;
         }
 
         int valueCopy = value; // copying initial value
@@ -108,6 +109,8 @@ public class Exercise {
 
         //printing result
         System.out.println("Number " + valueCopy + " (base 10) is " + result.toString() + " (base " + base + ").");
+
+        return result.toString();
     }
 
     /**
