@@ -3,6 +3,9 @@ package exercises;
 import java.math.BigInteger;
 
 public class App {
+    /**
+     * Main method for running exercises.
+     */
     public static void main(String[] args) {
         Exercise.findEvenNumbInInterval(1,11);
         Exercise.toBinary(24);
