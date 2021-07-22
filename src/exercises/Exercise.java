@@ -1,5 +1,6 @@
 package exercises;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -314,5 +315,29 @@ public class Exercise {
         System.out.println("Birth number format of " + birthNumb.trim() + " validity: " + result);
 
         return result;
+    }
+
+    /**
+     * This method prints a difference and a sum of arguments to the console.
+     *
+     * @param a BigInteger
+     * @param b BigInteger
+     */
+    public static void printDiffAndSum(BigInteger a, BigInteger b){
+        System.out.println(LINE_SEPARATOR);
+        System.out.println("Napis program, ktory scita a odcita dve lubovolne velke cisla, " +
+                "napriklad cislo s 150 ciframi a cislo s 50 ciframi.");
+
+        //handle null input
+        if (a == null || b == null){
+            System.out.println("Arguments must not be null.");
+            return;
+        }
+
+        System.out.println("Number a: " + a);
+        System.out.println("Number b: " + b);
+
+        System.out.println("a - b = " + a.subtract(b));
+        System.out.println("a + b = " + a.add(b));
     }
 }
