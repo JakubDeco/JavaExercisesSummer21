@@ -17,7 +17,7 @@ public class Exercise {
      *
      * @param a start of interval
      * @param b end of interval
-     * @return list of found even numbers or null if wrong arguments are passed
+     * @return list of found even numbers
      */
     public static List<Integer> findEvenNumbInInterval(int a, int b){
         System.out.println(LINE_SEPARATOR);
@@ -27,13 +27,13 @@ public class Exercise {
         //checking if arguments are natural numbers
         if(a < 0 || b < 0) {
             System.out.println(NATURAL_NUMBERS);
-            return null;
+            throw new IllegalArgumentException();
         }
 
         //checking if a is lesser or equal than b
         if(a >= b) {
             System.out.println("Argument a is greater or equal than b.");
-            return null;
+            throw new IllegalArgumentException();
         }
 
         //checking whether a is even or odd or 0
