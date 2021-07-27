@@ -262,7 +262,7 @@ public class Exercise {
      *
      * @param x natural number
      * @param y number in interval [0,9]
-     * @return int count or -1 if conditions failed
+     * @return int count
      */
     public static int findDigitInNumberCount(int x, int y){
         System.out.println(LINE_SEPARATOR);
@@ -272,13 +272,13 @@ public class Exercise {
         //check whether argument is natural number
         if (x < 0){
             System.out.println(NATURAL_NUMBER);
-            return -1;
+            throw new IllegalArgumentException();
         }
 
         //check if 0<=y<=9
         if (y < 0 || y >9) {
             System.out.println("Y has to be in interval [0,9].");
-            return -1;
+            throw new IllegalArgumentException();
         }
 
         var strX = String.valueOf(x);
