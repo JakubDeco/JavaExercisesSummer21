@@ -3,6 +3,7 @@ package exercises;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Exercise {
     private Exercise(){}
@@ -10,6 +11,16 @@ public class Exercise {
     private static final String LINE_SEPARATOR = "--------------------------------------------";
     private static final String NATURAL_NUMBER = "Argument must be natural number.";
     private static final String NATURAL_NUMBERS = "Arguments must be natural numbers.";
+
+    /**
+     * This method creates a map of characters(keys) and their count(values) from argument array.
+     *
+     * @param array of characters
+     * @return Map of characters with count
+     */
+    public static Map<Character,Integer> charIntegerMap(char[] array){
+        return null;
+    }
 
     /**
      * This method takes two natural numbers and finds and prints all even numbers in that interval.

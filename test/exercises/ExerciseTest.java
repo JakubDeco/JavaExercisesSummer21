@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -142,5 +144,24 @@ class ExerciseTest {
         assertTrue(Exercise.checkBirthNumbFormat(" 5608237453"));
         assertTrue(Exercise.checkBirthNumbFormat("960508/7856   "));
         assertTrue(Exercise.checkBirthNumbFormat("  8662157453"));
+    }
+
+    @Test
+    void charIntegerMap() {
+        assertEquals(new HashMap<Character,Integer>(),Exercise.charIntegerMap(new char[]{}));
+        assertEquals(new HashMap<Character,Integer>(),Exercise.charIntegerMap(null));
+
+        var arr1 = new char[]{'a','a','a','a','/','c','/','c','a','k'};
+        Map<Character,Integer> map1 = new HashMap<>();
+        map1.put('a', 5);
+        map1.put('/', 2);
+        map1.put('c', 2);
+        map1.put('k', 1);
+        assertEquals(map1,Exercise.charIntegerMap(arr1));
+
+        var arr2 = new char[]{'*'};
+        Map<Character,Integer> map2 = new HashMap<>();
+        map2.put('*', 1);
+        assertEquals(map2,Exercise.charIntegerMap(arr2));
     }
 }
