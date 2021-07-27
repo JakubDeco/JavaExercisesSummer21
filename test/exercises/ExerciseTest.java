@@ -90,8 +90,8 @@ class ExerciseTest {
 
     @Test
     void mod() {
-        assertEquals(-1,Exercise.mod(-1,2));
-        assertEquals(-1,Exercise.mod(689,0));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.mod(-1,2));
+        assertThrows(ArithmeticException.class,() -> Exercise.mod(689,0));
 
         assertEquals(1,Exercise.mod(7,2));
         assertEquals(29,Exercise.mod(9687364,35));
