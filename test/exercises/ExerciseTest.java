@@ -31,8 +31,8 @@ class ExerciseTest {
         assertEquals("0",Exercise.toBinary(0));
         assertEquals("11011001111111011000100110011",Exercise.toBinary(457158963));
         assertEquals("1101",Exercise.toBinary(13));
-        assertNull(Exercise.toBinary(-1));
-        assertNull(Exercise.toBinary(-98743845));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.toBinary(-1));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.toBinary(-98743845));
     }
 
     @Test
