@@ -67,8 +67,9 @@ class ExerciseTest {
 
     @Test
     void calcDigitCount() {
-        assertEquals(0,Exercise.calcDigitCount(-1));
-        assertEquals(0,Exercise.calcDigitCount(-876423));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.calcDigitCount(-1));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.calcDigitCount(-876423));
+
         assertEquals(1,Exercise.calcDigitCount(0));
         assertEquals(2,Exercise.calcDigitCount(29));
         assertEquals(5,Exercise.calcDigitCount(96725));

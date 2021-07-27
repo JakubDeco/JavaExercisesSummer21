@@ -143,10 +143,10 @@ public class Exercise {
     }
 
     /**
-     * This method calculates and prints digit count of argument number.
+     * This method calculates and prints digit count of argument number. Argument must be natural number.
      *
      * @param value natural number
-     * @return digit count or 0 if not given natural number
+     * @return digit count
      */
     public static int calcDigitCount(int value){
         System.out.println(LINE_SEPARATOR);
@@ -155,7 +155,7 @@ public class Exercise {
         //check whether argument is natural number
         if (value < 0){
             System.out.println(NATURAL_NUMBER);
-            return 0;
+            throw new IllegalArgumentException();
         }
 
         int dCount = String.valueOf(value).length();
