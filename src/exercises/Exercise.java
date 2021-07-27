@@ -119,7 +119,7 @@ public class Exercise {
      * This method calculates and prints digit sum of argument. Argument must be natural number.
      *
      * @param value a natural number
-     * @return digit sum of passed argument or -1 if not given natural number
+     * @return digit sum of passed argument
      */
     public static int calcDigitSum(int value){
         System.out.println(LINE_SEPARATOR);
@@ -128,7 +128,7 @@ public class Exercise {
         //check whether argument is natural number
         if (value < 0){
             System.out.println(NATURAL_NUMBER);
-            return -1;
+            throw new IllegalArgumentException();
         }
 
         int valueCopy = value;

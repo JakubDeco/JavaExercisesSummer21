@@ -1,7 +1,6 @@
 package exercises;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,8 +54,9 @@ class ExerciseTest {
 
     @Test
     void calcDigitSum() {
-        assertEquals(-1,Exercise.calcDigitSum(-1));
-        assertEquals(-1,Exercise.calcDigitSum(-4546837));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.calcDigitSum(-1));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.calcDigitSum(-4546837));
+
         assertEquals(0,Exercise.calcDigitSum(0));
         assertEquals(15,Exercise.calcDigitSum(12354));
         assertEquals(6,Exercise.calcDigitSum(15));
