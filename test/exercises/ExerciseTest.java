@@ -37,10 +37,10 @@ class ExerciseTest {
 
     @Test
     void toCustomBase() {
-        assertNull(Exercise.toCustomBase(-1,5));
-        assertNull(Exercise.toCustomBase(478,1));
-        assertNull(Exercise.toCustomBase(23,11));
-        assertNull(Exercise.toCustomBase(789534,-90));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.toCustomBase(-1,5));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.toCustomBase(478,1));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.toCustomBase(23,11));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.toCustomBase(789534,-90));
 
         assertEquals("111",Exercise.toCustomBase(7,2));
         assertEquals("2010",Exercise.toCustomBase(57,3));
