@@ -2,6 +2,7 @@ package exercises;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,7 +20,18 @@ public class Exercise {
      * @return Map of characters with count
      */
     public static Map<Character,Integer> charIntegerMap(char[] array){
-        return null;
+        Map<Character,Integer> resultMap = new HashMap<>();
+
+        //handle null or empty array
+        if (array == null || array.length == 0)
+            return resultMap;
+
+
+        for (char c : array) {
+            resultMap.merge(c, 1, Integer::sum);
+        }
+
+        return resultMap;
     }
 
     /**
