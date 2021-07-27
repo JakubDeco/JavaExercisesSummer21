@@ -165,10 +165,10 @@ public class Exercise {
     }
 
     /**
-     * This method reverses an argument number in reverse.
+     * This method reverses an argument number in reverse. Argument must be natural number.
      *
      * @param number natural number
-     * @return String of reversed number or null if not natural number passed
+     * @return String of reversed number
      */
     public static String reverse(int number){
         System.out.println(LINE_SEPARATOR);
@@ -178,7 +178,7 @@ public class Exercise {
         //check whether argument is natural number
         if (number < 0){
             System.out.println(NATURAL_NUMBER);
-            return null;
+            throw new IllegalArgumentException();
         }
 
         var result = new StringBuilder();

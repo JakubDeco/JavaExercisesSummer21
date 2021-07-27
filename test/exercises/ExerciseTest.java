@@ -78,8 +78,8 @@ class ExerciseTest {
 
     @Test
     void reverse() {
-        assertNull(Exercise.reverse(-1));
-        assertNull(Exercise.reverse(-12375));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.reverse(-1));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.reverse(-12375));
 
         assertEquals("0",Exercise.reverse(0));
         assertEquals("8763",Exercise.reverse(3678));
