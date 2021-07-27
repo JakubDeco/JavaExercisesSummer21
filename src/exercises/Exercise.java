@@ -227,7 +227,7 @@ public class Exercise {
      *
      * @param x dividend
      * @param y divisor
-     * @return int quotient or -1 if conditions failed
+     * @return int quotient
      */
     public static int div(int x, int y){
         System.out.println(LINE_SEPARATOR);
@@ -237,13 +237,13 @@ public class Exercise {
         //checking if arguments are natural numbers
         if(x < 0 || y < 0) {
             System.out.println(NATURAL_NUMBERS);
-            return -1;
+            throw new IllegalArgumentException();
         }
 
         //check division by zero
         if (y == 0){
             System.out.println("Division by zero is not allowed.");
-            return -1;
+            throw new ArithmeticException("/ by zero");
         }
 
         var i = 1;

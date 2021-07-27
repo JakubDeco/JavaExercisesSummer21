@@ -103,8 +103,8 @@ class ExerciseTest {
 
     @Test
     void div() {
-        assertEquals(-1,Exercise.div(12378,0));
-        assertEquals(-1,Exercise.div(-1,54));
+        assertThrows(ArithmeticException.class,() -> Exercise.div(12378,0));
+        assertThrows(IllegalArgumentException.class,() -> Exercise.div(-1,54));
 
         assertEquals(870,Exercise.div(7836,9));
         assertEquals(0,Exercise.div(7,8));
